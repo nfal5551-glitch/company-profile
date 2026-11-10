@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Lokeria.id</title>
+  <link rel="icon" href="images/logo-icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="jobs.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" id="main-nav"></nav>
+  </header>
+  <main>
+    <section class="page-hero-simple container">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="dash.eyebrow">Area kamu</span></div>
+      <h1 data-i18n="dash.title">Dashboard</h1>
+      <p class="page-lead" id="dash-greeting">Halo! Ringkasan aktivitasmu di Lokeria.id.</p>
+    </section>
+    <section class="section container">
+      <div class="dash-quick" id="dash-quick"></div>
+      <div class="dash-stats" id="dash-stats"></div>
+      <div class="dash-grid">
+        <div class="dash-panel">
+          <h2 data-i18n="dash.saved">Lowongan tersimpan</h2>
+          <div id="dash-saved" class="dash-list"></div>
+        </div>
+        <div class="dash-panel">
+          <h2 data-i18n="dash.apps">Riwayat lamaran</h2>
+          <div id="dash-apps" class="dash-list"></div>
+        </div>
+      </div>
+      <div class="dash-panel" style="margin-top:18px">
+        <h2 data-i18n="dash.notif">Notifikasi</h2>
+        <div id="dash-notif" class="dash-list"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="main-footer"></footer>
+</body>
+</html>

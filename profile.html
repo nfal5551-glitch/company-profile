@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil — Lokeria.id</title>
+  <link rel="icon" href="images/logo-icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="jobs.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" id="main-nav"></nav>
+  </header>
+  <main>
+    <section class="page-hero-simple container">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="profile.eyebrow">Akun</span></div>
+      <h1 data-i18n="profile.title">Profil saya</h1>
+      <p class="page-lead" data-i18n="profile.lead">Lengkapi profil agar lamaran lebih cepat dikirim.</p>
+    </section>
+    <section class="section container">
+      <form id="profile-form" class="contact-form apply-form" style="max-width:560px">
+        <div class="form-row">
+          <label for="pf-name" data-i18n="register.name">Nama lengkap</label>
+          <input type="text" id="pf-name" required>
+        </div>
+        <div class="form-row">
+          <label for="pf-email" data-i18n="login.email">Email</label>
+          <input type="email" id="pf-email" readonly>
+        </div>
+        <div class="form-row">
+          <label for="pf-phone">WhatsApp / telepon</label>
+          <input type="tel" id="pf-phone" placeholder="08xxxxxxxxxx">
+        </div>
+        <div class="form-row">
+          <label for="pf-city">Kota</label>
+          <input type="text" id="pf-city" placeholder="Jakarta">
+        </div>
+        <div class="form-row">
+          <label for="pf-skills">Skill (pisahkan koma)</label>
+          <input type="text" id="pf-skills" placeholder="JavaScript, Figma, Excel">
+        </div>
+        <div class="form-row">
+          <label for="pf-bio">Bio singkat</label>
+          <textarea id="pf-bio" rows="4" placeholder="Ceritakan pengalamanmu..."></textarea>
+        </div>
+        <button type="submit" class="button button-primary" data-i18n="profile.save">Simpan profil</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer" id="main-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lokeria menghubungkan pencari kerja, perusahaan, dan penyedia jasa dalam satu platform.">
+  <title>Lokeria.id — Temukan Peluangmu</title>
+  <link rel="icon" href="images/logo-icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="jobs.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <a class="brand" href="index.html" aria-label="Lokeria, halaman Home">
+        <img src="images/logo-icon.png" alt="" class="brand-logo" width="34" height="34">
+        <span class="brand-mark">L</span>
+        Lokeria<span class="brand-dot">.id</span>
+      </a>
+      <button class="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false"><span></span><span></span><span></span></button>
+                        <div class="nav-links">
+        <a class="nav-link active" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="nav-link" href="lowongan.html" data-i18n="nav.jobs">Lowongan</a>
+        <a class="nav-link" href="iklan.html" data-i18n="nav.advertise">Perusahaan</a>
+        <a class="nav-link" href="kategori.html" data-i18n="nav.category">Kategori</a>
+        <a class="nav-link" href="portfolio.html" data-i18n="nav.portfolio">Portofolio</a>
+        <a class="nav-link" href="about.html" data-i18n="nav.about">Tentang</a>
+        <a class="nav-link" href="contact.html" data-i18n="nav.contact">Kontak</a>
+        <a class="nav-link" href="faq.html" data-i18n="nav.faq">FAQ</a>
+      </div>
+      <div class="search-wrap search-wrap-prominent">
+        <label class="search-label" for="job-search">
+          <svg class="search-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="job-search" class="search-input" data-i18n-placeholder="search.placeholder" placeholder="Jabatan, perusahaan, atau kata kunci..." autocomplete="off">
+        </label>
+        <div class="search-results" id="search-results" role="listbox"></div>
+      </div>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+      <a class="nav-login-btn" href="login.html" data-auth-label="1" data-i18n="nav.login">Masuk</a>
+      <a class="nav-cta-btn" href="lowongan.html" data-i18n="nav.cta">Cari kerja</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-home">
+      <div class="hero-home-bg" style="background-image:url('images/office-bg.jpg')"></div>
+      <div class="hero-home-overlay"></div>
+      
+      <div class="hero-runner" aria-hidden="true">
+        <div class="runner">
+          <div class="runner-head"></div>
+          <div class="runner-body"></div>
+          <div class="runner-arm runner-arm-l"></div>
+          <div class="runner-arm runner-arm-r"></div>
+          <div class="runner-leg runner-leg-l"></div>
+          <div class="runner-leg runner-leg-r"></div>
+        </div>
+        <div class="runner-ground"></div>
+        <div class="runner-label">Kejar peluangmu!</div>
+      </div>
+
+      <div class="container hero-home-inner">
+        <div class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> <span data-i18n="hero.eyebrow">Platform peluang kerja & jasa</span></div>
+        <h1><span data-i18n="hero.title">Kesulitan diterima? Tenang saja, Lokeria.id di sini.</span></h1>
+        <p data-i18n="hero.desc">Temukan lowongan dari perusahaan ternama, tawarkan keahlianmu, atau pasang iklan perusahaan — semua di satu tempat.</p>
+        <form class="hero-search-box" action="lowongan.html" method="get" role="search">
+          <input type="search" name="q" id="hero-job-search" data-i18n-placeholder="search.placeholder" placeholder="Jabatan, perusahaan, atau kata kunci..." autocomplete="off">
+          <button type="submit" data-i18n="hero.searchBtn">Cari lowongan</button>
+        </form>
+        <div class="category-chips">
+          <a class="chip" href="lowongan.html">Full-time</a>
+          <a class="chip" href="lowongan.html">Part-time</a>
+          <a class="chip" href="lowongan.html">Internship</a>
+          <a class="chip" href="lowongan.html">Freelance</a>
+          <a class="chip" href="lowongan.html">Remote</a>
+          <a class="chip" href="kategori.html">Semua kategori →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-strip">
+      <div class="container">
+        <p class="company-strip-label" data-i18n="companies.label">Perusahaan yang lowongannya ada di Lokeria.id</p>
+        <div class="company-logos">
+          <a href="perusahaan.html?name=Google" title="Google"><img src="images/google-logo.png" alt="Google"></a>
+          <a href="perusahaan.html?name=Shopee" title="Shopee"><img src="images/shopee-logo.png" alt="Shopee"></a>
+          <a href="perusahaan.html?name=Tokopedia" title="Tokopedia"><img src="images/tokopedia-logo.png" alt="Tokopedia"></a>
+          <a href="perusahaan.html?name=Gojek" title="Gojek"><img src="images/gojek-logo.png" alt="Gojek"></a>
+          <a href="perusahaan.html?name=BCA" title="BCA"><img src="images/bca-logo.png" alt="BCA"></a>
+          <a href="perusahaan.html?name=Microsoft" title="Microsoft"><img src="images/microsoft-logo.png" alt="Microsoft"></a>
+          <a href="perusahaan.html?name=Grab" title="Grab"><img src="images/grab-logo.png" alt="Grab"></a>
+          <a href="perusahaan.html?name=Traveloka" title="Traveloka"><img src="images/traveloka-logo.png" alt="Traveloka"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="home-stats" id="home-stats"></div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-inner"><span>UNTUK SETIAP LANGKAH</span><div class="trust-item">Perusahaan besar</div><div class="trust-item">Bisnis berkembang</div><div class="trust-item">Usaha lokal</div><div class="trust-item">Individu & freelancer</div></div>
+    </section>
+
+    <section class="container" style="padding:28px 0 0">
+      <div class="visual-strip">
+        <div class="visual-tile">Kantor modern</div>
+        <div class="visual-tile">Tim kolaboratif</div>
+        <div class="visual-tile">Karir digital</div>
+        <div class="visual-tile">Pertumbuhan</div>
+      </div>
+    </section>
+
+    <section class="section container" id="peluang">
+      <div class="section-heading">
+        <div><div class="eyebrow">Satu platform, banyak kemungkinan</div><h2>Peluang yang bisa kamu <span class="accent-text">mulai hari ini.</span></h2></div>
+        <p>Baik kamu sedang mencari pekerjaan maupun membutuhkan bantuan, ada ruang untukmu di Lokeria.</p>
+      </div>
+      <div class="opportunity-grid">
+        <article class="opportunity-card opportunity-dark"><div class="opportunity-icon">⌕</div><span class="card-kicker">UNTUK PENCARI KERJA</span><h3>Temukan pekerjaan yang cocok.</h3><p>Jelajahi kesempatan dari perusahaan besar, bisnis menengah, usaha kecil, dan pemberi kerja individu.</p><a href="#cara-kerja" class="text-link">Lihat cara kerjanya <span>→</span></a><div class="decor-circle"></div></article>
+        <article class="opportunity-card opportunity-lilac"><div class="opportunity-icon">✳</div><span class="card-kicker">UNTUK PENYEDIA JASA</span><h3>Ubah keahlian jadi kesempatan.</h3><p>Tawarkan jasa, bantu orang menyelesaikan kebutuhan mereka, dan bangun koneksi baru.</p><a href="about.html#visi" class="text-link">Kenali misi kami <span>→</span></a><div class="decor-star">✳</div></article>
+        <article class="opportunity-card opportunity-yellow"><div class="opportunity-icon">↗</div><span class="card-kicker">UNTUK BISNIS & INDIVIDU</span><h3>Temukan orang yang tepat.</h3><p>Promosikan layanan atau produk, bagikan kebutuhan, dan temukan mitra untuk proyekmu.</p><a href="about.html" class="text-link">Tentang Lokeria <span>→</span></a><div class="decor-ring"></div></article>
+      </div>
+    </section>
+
+    <section class="how-section" id="cara-kerja">
+      <div class="container how-layout">
+        <div><div class="eyebrow">Mudah dimulai</div><h2>Langkah sederhana.<br><span class="accent-text">Kemungkinan tanpa batas.</span></h2><p class="muted-copy">Lokeria dirancang agar orang dan bisnis bisa saling menemukan dengan lebih mudah.</p><a href="about.html" class="button button-primary">Pelajari tentang kami <span>→</span></a></div>
+        <div class="steps">
+          <div class="step"><span class="step-number">01</span><div><h3>Tentukan kebutuhanmu</h3><p>Cari pekerjaan, cari bantuan, atau siapkan layanan yang ingin kamu tawarkan.</p></div><span class="step-arrow">↗</span></div>
+          <div class="step"><span class="step-number">02</span><div><h3>Temukan kecocokan</h3><p>Jelajahi peluang dan temukan pihak yang sesuai dengan tujuanmu.</p></div><span class="step-arrow">↗</span></div>
+          <div class="step"><span class="step-number">03</span><div><h3>Mulai berkolaborasi</h3><p>Hubungi pihak terkait, diskusikan kebutuhan, lalu wujudkan rencanamu.</p></div><span class="step-arrow">↗</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories / Happy People -->
+    <section class="section container success-section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Cerita nyata</div>
+          <h2>Mereka sudah <span class="accent-text">mendapatkan peluang.</span></h2>
+        </div>
+        <p>Beberapa wajah bahagia yang menemukan pekerjaan atau klien melalui Lokeria.</p>
+      </div>
+      <div class="success-grid">
+        <article class="success-card">
+          <div class="success-photo">
+            <img src="images/happy-1.jpg" alt="Rina, content writer yang baru diterima kerja" loading="lazy">
+          </div>
+          <div class="success-body">
+            <h3>Rina, 26</h3>
+            <p class="success-role">Content Writer · Startup EduTech</p>
+            <p>“Dalam seminggu saya sudah dapat panggilan interview. Sekarang kerja full-time remote!”</p>
+          </div>
+        </article>
+        <article class="success-card">
+          <div class="success-photo">
+            <img src="images/happy-2.jpg" alt="Andi, freelancer desain yang mendapat project" loading="lazy">
+          </div>
+          <div class="success-body">
+            <h3>Andi, 31</h3>
+            <p class="success-role">Desainer Freelance</p>
+            <p>“Dari tawarkan jasa di Lokeria, sekarang punya klien tetap untuk branding UMKM.”</p>
+          </div>
+        </article>
+        <article class="success-card">
+          <div class="success-photo">
+            <img src="images/happy-3.jpg" alt="Sari, admin online shop yang senang mendapat pekerjaan" loading="lazy">
+          </div>
+          <div class="success-body">
+            <h3>Sari, 24</h3>
+            <p class="success-role">Admin Online Shop · Part-time</p>
+            <p>“Prosesnya cepat dan jelas. Saya langsung cocok dengan pemilik usahanya.”</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    
+    
+    <section class="section container demo-guide reveal">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Panduan demo</div>
+          <h2>Cara mencoba <span class="accent-text">fitur Lokeria.id</span></h2>
+        </div>
+      </div>
+      <ol class="guide-steps">
+        <li><strong>Masuk</strong> — pakai akun demo <code>demo@lokeria.id</code> / <code>demo123</code> atau daftar baru.</li>
+        <li><strong>Dashboard</strong> — lihat lowongan tersimpan, lamaran, dan notifikasi.</li>
+        <li><strong>Cari &amp; lamar</strong> — buka Lowongan → Detail → Lamar (bisa export PDF).</li>
+        <li><strong>Profil</strong> — lengkapi data diri agar form lebih cepat.</li>
+      </ol>
+    </section>
+
+    <section class="section container testimonials-section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Testimoni</div>
+          <h2>Mereka sudah <span class="accent-text">merasakan manfaatnya.</span></h2>
+        </div>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-photo"><img src="images/happy-1.jpg" alt="Rina"></div>
+          <blockquote>"Dalam seminggu saya dapat interview. Proses di Lokeria jelas dan tidak ribet."</blockquote>
+          <p class="testimonial-name">Rina · Content Writer</p>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-photo"><img src="images/happy-2.jpg" alt="Andi"></div>
+          <blockquote>"Dari tawarkan jasa, sekarang punya klien tetap. Platformnya mudah dipakai."</blockquote>
+          <p class="testimonial-name">Andi · Desainer Freelance</p>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-photo"><img src="images/happy-3.jpg" alt="Sari"></div>
+          <blockquote>"Cocok banget buat yang baru mulai cari kerja part-time. Recommended!"</blockquote>
+          <p class="testimonial-name">Sari · Admin Online Shop</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing-cta container"><div><span class="eyebrow">Peluang berikutnya menunggumu</span><h2>Siap membuka <span class="accent-text">kemungkinan baru?</span></h2><p>Kenali tujuanmu, lalu ambil langkah pertamamu bersama Lokeria.</p></div><a class="button button-dark" href="about.html">Kenali Lokeria <span>→</span></a></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><a class="brand brand-footer" href="index.html"><span class="brand-mark">L</span> Lokeria<span class="brand-dot">.id</span></a><p data-i18n="footer.tagline">Menghubungkan potensi dengan peluang.</p><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="lowongan.html">Lowongan</a><a href="iklan.html">Iklankan</a><a href="portfolio.html">Portofolio</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div></div><div class="container footer-bottom"><span>© <span data-year></span> Lokeria. Proyek website company profile.</span><span>Dibuat untuk mempertemukan peluang dan potensi.</span></div></footer>
+</body>
+</html>

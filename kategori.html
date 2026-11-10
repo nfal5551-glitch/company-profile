@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kategori — Lokeria.id</title>
+  <link rel="icon" href="images/logo-icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="jobs.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="index.html">
+        <img src="images/logo-icon.png" alt="" class="brand-logo" width="34" height="34">
+        <span class="brand-mark">L</span>
+        Lokeria<span class="brand-dot">.id</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+            <div class="nav-links">
+        <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="nav-link" href="lowongan.html" data-i18n="nav.jobs">Lowongan</a>
+        <a class="nav-link" href="iklan.html" data-i18n="nav.advertise">Perusahaan</a>
+        <a class="nav-link active" href="kategori.html" data-i18n="nav.category">Kategori</a>
+        <a class="nav-link" href="portfolio.html" data-i18n="nav.portfolio">Portofolio</a>
+        <a class="nav-link" href="about.html" data-i18n="nav.about">Tentang</a>
+        <a class="nav-link" href="contact.html" data-i18n="nav.contact">Kontak</a>
+        <a class="nav-link" href="faq.html" data-i18n="nav.faq">FAQ</a>
+      </div>
+      <div class="search-wrap search-wrap-prominent">
+        <label class="search-label" for="job-search">
+          <svg class="search-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="job-search" class="search-input" data-i18n-placeholder="search.placeholder" placeholder="Jabatan, perusahaan, atau kata kunci..." autocomplete="off">
+        </label>
+        <div class="search-results" id="search-results" role="listbox"></div>
+      </div>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+      <a class="nav-login-btn" href="login.html" data-auth-label="1" data-i18n="nav.login">Masuk</a>
+      <a class="nav-cta-btn" href="lowongan.html" data-i18n="nav.cta">Cari kerja</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero-simple container">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> Jelajahi peluang</div>
+      <h1>Kategori <span class="accent-text">lowongan & jasa.</span></h1>
+      <p class="page-lead">Pilih jalur yang cocok — dari full-time sampai freelance, magang, dan remote.</p>
+    </section>
+
+    <section class="section container">
+      <div class="category-grid">
+        <a class="cat-card cat-a" href="lowongan.html">
+          <span class="cat-icon">💼</span>
+          <h3>Full-time</h3>
+          <p>Karir tetap di perusahaan ternama</p>
+        </a>
+        <a class="cat-card cat-b" href="lowongan.html">
+          <span class="cat-icon">⏰</span>
+          <h3>Part-time</h3>
+          <p>Jadwal fleksibel, cocok sampingan</p>
+        </a>
+        <a class="cat-card cat-c" href="lowongan.html">
+          <span class="cat-icon">🎓</span>
+          <h3>Internship / Magang</h3>
+          <p>Untuk mahasiswa & fresh graduate</p>
+        </a>
+        <a class="cat-card cat-d" href="lowongan.html">
+          <span class="cat-icon">📝</span>
+          <h3>Contract</h3>
+          <p>Proyek berbatas waktu</p>
+        </a>
+        <a class="cat-card cat-e" href="lowongan.html">
+          <span class="cat-icon">🎨</span>
+          <h3>Freelance</h3>
+          <p>Tawarkan jasa & keahlianmu</p>
+        </a>
+        <a class="cat-card cat-f" href="lowongan.html">
+          <span class="cat-icon">🌐</span>
+          <h3>Remote</h3>
+          <p>Kerja dari mana saja</p>
+        </a>
+        <a class="cat-card cat-g" href="lowongan.html">
+          <span class="cat-icon">💻</span>
+          <h3>IT & Engineer</h3>
+          <p>Software, data, cloud, security</p>
+        </a>
+        <a class="cat-card cat-h" href="lowongan.html">
+          <span class="cat-icon">🏦</span>
+          <h3>Keuangan & Bank</h3>
+          <p>BCA, Mandiri, BRI, BNI</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand brand-footer" href="index.html"><span class="brand-mark">L</span> Lokeria<span class="brand-dot">.id</span></a>
+      <p data-i18n="footer.tagline">Menghubungkan potensi dengan peluang.</p>
+      <div class="footer-links">
+        <a href="lowongan.html">Lowongan</a><a href="kategori.html">Kategori</a><a href="login.html">Masuk</a>
+      </div>
+      <div class="footer-social"><a href="#">IG</a><a href="#">in</a><a href="#">X</a></div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year></span> Lokeria.</span>
+      <span>Demo untuk tugas.</span>
+    </div>
+  </footer>
+</body>
+</html>

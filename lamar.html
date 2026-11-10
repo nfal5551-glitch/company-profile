@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulir lamaran pekerjaan Lokeria.">
+  <title>Lamar Pekerjaan — Lokeria.id</title>
+  <link rel="icon" href="images/logo-icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="jobs.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <a class="brand" href="index.html" aria-label="Lokeria, halaman Home">
+        <img src="images/logo-icon.png" alt="" class="brand-logo" width="34" height="34">
+        <span class="brand-mark">L</span>
+        Lokeria<span class="brand-dot">.id</span>
+      </a>
+      <button class="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false"><span></span><span></span><span></span></button>
+                        <div class="nav-links">
+        <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="nav-link active" href="lowongan.html" data-i18n="nav.jobs">Lowongan</a>
+        <a class="nav-link" href="iklan.html" data-i18n="nav.advertise">Perusahaan</a>
+        <a class="nav-link" href="kategori.html" data-i18n="nav.category">Kategori</a>
+        <a class="nav-link" href="portfolio.html" data-i18n="nav.portfolio">Portofolio</a>
+        <a class="nav-link" href="about.html" data-i18n="nav.about">Tentang</a>
+        <a class="nav-link" href="contact.html" data-i18n="nav.contact">Kontak</a>
+        <a class="nav-link" href="faq.html" data-i18n="nav.faq">FAQ</a>
+      </div>
+      <div class="search-wrap search-wrap-prominent">
+        <label class="search-label" for="job-search">
+          <svg class="search-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="job-search" class="search-input" data-i18n-placeholder="search.placeholder" placeholder="Jabatan, perusahaan, atau kata kunci..." autocomplete="off">
+        </label>
+        <div class="search-results" id="search-results" role="listbox"></div>
+      </div>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+      <a class="nav-login-btn" href="login.html" data-auth-label="1" data-i18n="nav.login">Masuk</a>
+      <a class="nav-cta-btn" href="lowongan.html" data-i18n="nav.cta">Cari kerja</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero-simple container">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> Formulir lamaran</div>
+      <h1>Lamar <span class="accent-text" id="job-title-heading">pekerjaan ini.</span></h1>
+      <p class="page-lead">Isi formulir di bawah. Tim rekrutmen akan meninjau lamaranmu (demo untuk tugas).</p>
+    </section>
+
+    <section class="section container">
+      <div class="apply-layout">
+        <aside class="apply-job-card" id="job-summary">
+          <div class="apply-job-logo">
+            <img id="job-logo" src="images/google-logo.png" alt="Logo perusahaan">
+          </div>
+          <h2 id="job-position">Software Engineer — Backend</h2>
+          <p class="apply-company" id="job-company">Google Indonesia</p>
+          <p class="apply-meta" id="job-meta">📍 Jakarta / Hybrid · Full-time</p>
+          <a href="lowongan.html" class="text-link">← Kembali ke daftar lowongan</a>
+        </aside>
+
+        <form class="contact-form apply-form" id="apply-form" action="#" method="post">
+          <input type="hidden" id="job-id" name="job_id" value="">
+          <div class="form-row">
+            <label for="fullname">Nama lengkap *</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Nama sesuai KTP" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Nomor WhatsApp / telepon *</label>
+            <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx" required>
+          </div>
+          <div class="form-row">
+            <label for="city">Kota domisili *</label>
+            <input type="text" id="city" name="city" placeholder="Contoh: Jakarta Selatan" required>
+          </div>
+          <div class="form-row">
+            <label for="education">Pendidikan terakhir *</label>
+            <select id="education" name="education" required>
+              <option value="">Pilih pendidikan</option>
+              <option value="sma">SMA / SMK</option>
+              <option value="d3">Diploma (D3)</option>
+              <option value="s1">Sarjana (S1)</option>
+              <option value="s2">Magister (S2)</option>
+              <option value="s3">Doktor (S3)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="experience">Pengalaman kerja</label>
+            <select id="experience" name="experience">
+              <option value="fresh">Fresh graduate / belum berpengalaman</option>
+              <option value="1-2">1–2 tahun</option>
+              <option value="3-5">3–5 tahun</option>
+              <option value="5+">Lebih dari 5 tahun</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="linkedin">Link LinkedIn / portofolio (opsional)</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://...">
+          </div>
+          <div class="form-row">
+            <label for="cv">Upload CV (PDF) — demo, tidak benar-benar terkirim</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+          </div>
+          <div class="form-row">
+            <label for="motivation">Motivasi singkat *</label>
+            <textarea id="motivation" name="motivation" rows="4" placeholder="Mengapa kamu cocok untuk posisi ini?" required></textarea>
+          </div>
+          <button type="submit" class="button button-primary" style="width:100%">Kirim lamaran <span>→</span></button>
+          <p class="form-note">Dengan mengirim, kamu menyetujui data ini diproses untuk keperluan rekrutmen (demo tugas).</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+  <div class="success-modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="success-modal-box">
+      <div class="success-modal-icon">🎉</div>
+      <h2 id="modal-title">Yey, udah kekirim, tungguin yaa!</h2>
+      <p>Lamaranmu sudah kami terima. Tim rekrutmen akan meninjau dan menghubungimu jika cocok.</p>
+      <button type="button" class="button button-primary" id="modal-close">Oke, sip!</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand brand-footer" href="index.html"><span class="brand-mark">L</span> Lokeria<span class="brand-dot">.id</span></a>
+      <p data-i18n="footer.tagline">Menghubungkan potensi dengan peluang.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="lowongan.html">Lowongan</a>
+        <a href="iklan.html">Iklankan</a>
+        <a href="portfolio.html">Portofolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    <div class="footer-social"><a href="#">IG</a><a href="#">in</a><a href="#">X</a></div></div>
+    <div class="container footer-bottom">
+      <span>© <span data-year></span> Lokeria. Proyek website company profile.</span>
+      <span>Dibuat untuk mempertemukan peluang dan potensi.</span>
+    </div>
+  </footer>
+
+  <script>
+    const jobs = {
+      'google-se': {
+        title: "Software Engineer \u2014 Backend",
+        company: "Google Indonesia",
+        meta: "\ud83d\udccd Jakarta / Hybrid \u00b7 Full-time",
+        logo: "images/google-logo.png"
+      },
+      'google-fe': {
+        title: "Frontend Engineer",
+        company: "Google Indonesia",
+        meta: "\ud83d\udccd Jakarta / Hybrid \u00b7 Full-time",
+        logo: "images/google-logo.png"
+      },
+      'google-pm': {
+        title: "Program Manager",
+        company: "Google Indonesia",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/google-logo.png"
+      },
+      'shopee-pm': {
+        title: "Product Manager \u2014 Marketplace",
+        company: "Shopee",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/shopee-logo.png"
+      },
+      'shopee-be': {
+        title: "Backend Engineer",
+        company: "Shopee",
+        meta: "\ud83d\udccd Jakarta / Remote \u00b7 Full-time",
+        logo: "images/shopee-logo.png"
+      },
+      'shopee-ds': {
+        title: "Data Scientist",
+        company: "Shopee",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/shopee-logo.png"
+      },
+      'tokopedia-da': {
+        title: "Data Analyst",
+        company: "Tokopedia",
+        meta: "\ud83d\udccd Jakarta / Remote \u00b7 Full-time",
+        logo: "images/tokopedia-logo.png"
+      },
+      'tokopedia-qa': {
+        title: "QA Engineer",
+        company: "Tokopedia",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/tokopedia-logo.png"
+      },
+      'tokopedia-ops': {
+        title: "Operations Associate",
+        company: "Tokopedia",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/tokopedia-logo.png"
+      },
+      'gojek-ux': {
+        title: "UI/UX Designer",
+        company: "Gojek",
+        meta: "\ud83d\udccd Jakarta / Hybrid \u00b7 Full-time",
+        logo: "images/gojek-logo.png"
+      },
+      'gojek-ios': {
+        title: "iOS Engineer",
+        company: "Gojek",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/gojek-logo.png"
+      },
+      'gojek-android': {
+        title: "Android Engineer",
+        company: "Gojek",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/gojek-logo.png"
+      },
+      'bca-rm': {
+        title: "Relationship Manager \u2014 Corporate",
+        company: "BCA",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/bca-logo.png"
+      },
+      'bca-it': {
+        title: "IT Security Analyst",
+        company: "BCA",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/bca-logo.png"
+      },
+      'bca-teller': {
+        title: "Customer Service Officer",
+        company: "BCA",
+        meta: "\ud83d\udccd Bandung \u00b7 Full-time",
+        logo: "images/bca-logo.png"
+      },
+      'microsoft-cloud': {
+        title: "Cloud Solutions Architect",
+        company: "Microsoft",
+        meta: "\ud83d\udccd Jakarta / Remote \u00b7 Full-time",
+        logo: "images/microsoft-logo.png"
+      },
+      'microsoft-support': {
+        title: "Technical Support Engineer",
+        company: "Microsoft",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/microsoft-logo.png"
+      },
+      'amazon-ops': {
+        title: "Operations Manager",
+        company: "Amazon",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/amazon-logo.png"
+      },
+      'amazon-sde': {
+        title: "Software Development Engineer",
+        company: "Amazon",
+        meta: "\ud83d\udccd Jakarta / Remote \u00b7 Full-time",
+        logo: "images/amazon-logo.png"
+      },
+      'meta-marketing': {
+        title: "Digital Marketing Specialist",
+        company: "Meta",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/meta-logo.png"
+      },
+      'meta-research': {
+        title: "User Experience Researcher",
+        company: "Meta",
+        meta: "\ud83d\udccd Remote \u00b7 Full-time",
+        logo: "images/meta-logo.png"
+      },
+      'netflix-content': {
+        title: "Content Operations Specialist",
+        company: "Netflix",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/netflix-logo.png"
+      },
+      'apple-retail': {
+        title: "Retail Specialist",
+        company: "Apple",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/apple-logo.png"
+      },
+      'traveloka-fe': {
+        title: "Frontend Developer",
+        company: "Traveloka",
+        meta: "\ud83d\udccd Jakarta / Hybrid \u00b7 Full-time",
+        logo: "images/traveloka-logo.png"
+      },
+      'traveloka-ba': {
+        title: "Business Analyst",
+        company: "Traveloka",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/traveloka-logo.png"
+      },
+      'bukalapak-growth': {
+        title: "Growth Marketing Lead",
+        company: "Bukalapak",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/bukalapak-logo.png"
+      },
+      'bukalapak-be': {
+        title: "Backend Developer",
+        company: "Bukalapak",
+        meta: "\ud83d\udccd Jakarta / Remote \u00b7 Full-time",
+        logo: "images/bukalapak-logo.png"
+      },
+      'blibli-pm': {
+        title: "Product Owner",
+        company: "Blibli",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/blibli-logo.png"
+      },
+      'blibli-data': {
+        title: "Data Engineer",
+        company: "Blibli",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/blibli-logo.png"
+      },
+      'grab-driver-ops': {
+        title: "Driver Operations Analyst",
+        company: "Grab",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/grab-logo.png"
+      },
+      'grab-ml': {
+        title: "Machine Learning Engineer",
+        company: "Grab",
+        meta: "\ud83d\udccd Jakarta / Hybrid \u00b7 Full-time",
+        logo: "images/grab-logo.png"
+      },
+      'tiket-cs': {
+        title: "Customer Experience Lead",
+        company: "tiket.com",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/tiket-logo.png"
+      },
+      'tiket-android': {
+        title: "Android Developer",
+        company: "tiket.com",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/tiket-logo.png"
+      },
+      'ruangguru-content': {
+        title: "Education Content Creator",
+        company: "Ruangguru",
+        meta: "\ud83d\udccd Jakarta / Remote \u00b7 Full-time",
+        logo: "images/ruangguru-logo.png"
+      },
+      'ruangguru-eng': {
+        title: "Fullstack Engineer",
+        company: "Ruangguru",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/ruangguru-logo.png"
+      },
+      'telkom-network': {
+        title: "Network Engineer",
+        company: "Telkom Indonesia",
+        meta: "\ud83d\udccd Bandung \u00b7 Full-time",
+        logo: "images/telkom-logo.png"
+      },
+      'telkom-digital': {
+        title: "Digital Product Manager",
+        company: "Telkom Indonesia",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/telkom-logo.png"
+      },
+      'mandiri-credit': {
+        title: "Credit Analyst",
+        company: "Bank Mandiri",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/mandiri-logo.png"
+      },
+      'mandiri-it': {
+        title: "Application Developer",
+        company: "Bank Mandiri",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/mandiri-logo.png"
+      },
+      'bri-micro': {
+        title: "Account Officer Mikro",
+        company: "BRI",
+        meta: "\ud83d\udccd Surabaya \u00b7 Full-time",
+        logo: "images/bri-logo.png"
+      },
+      'bri-digital': {
+        title: "Digital Banking Specialist",
+        company: "BRI",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/bri-logo.png"
+      },
+      'bni-wealth': {
+        title: "Wealth Management Advisor",
+        company: "BNI",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/bni-logo.png"
+      },
+      'bni-risk': {
+        title: "Risk Management Analyst",
+        company: "BNI",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/bni-logo.png"
+      },
+      'xl-network': {
+        title: "Radio Network Planner",
+        company: "XL Axiata",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/xl-logo.png"
+      },
+      'xl-marketing': {
+        title: "Brand Marketing Manager",
+        company: "XL Axiata",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/xl-logo.png"
+      },
+      'indosat-sales': {
+        title: "Enterprise Sales Executive",
+        company: "Indosat Ooredoo",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/indosat-logo.png"
+      },
+      'indosat-noc': {
+        title: "NOC Engineer",
+        company: "Indosat Ooredoo",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/indosat-logo.png"
+      },
+      'unilever-brand': {
+        title: "Brand Manager",
+        company: "Unilever",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/unilever-logo.png"
+      },
+      'unilever-supply': {
+        title: "Supply Chain Analyst",
+        company: "Unilever",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/unilever-logo.png"
+      },
+      'astra-hr': {
+        title: "HR Business Partner",
+        company: "Astra International",
+        meta: "\ud83d\udccd Jakarta \u00b7 Full-time",
+        logo: "images/astragraphia-logo.png"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const jobId = params.get('job') || 'google-se';
+    const job = jobs[jobId] || jobs['google-se'];
+
+    document.getElementById('job-id').value = jobId;
+    document.getElementById('job-position').textContent = job.title;
+    document.getElementById('job-company').textContent = job.company;
+    document.getElementById('job-meta').textContent = job.meta;
+    document.getElementById('job-logo').src = job.logo;
+    document.getElementById('job-logo').alt = 'Logo ' + job.company;
+    document.getElementById('job-title-heading').textContent = job.title;
+
+    document.getElementById('apply-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var modal = document.getElementById('success-modal');
+      modal.classList.add('is-open');
+      this.reset();
+    });
+
+    document.getElementById('modal-close').addEventListener('click', function () {
+      document.getElementById('success-modal').classList.remove('is-open');
+    });
+    document.getElementById('success-modal').addEventListener('click', function (e) {
+      if (e.target === this) this.classList.remove('is-open');
+    });
+  </script>
+</body>
+</html>

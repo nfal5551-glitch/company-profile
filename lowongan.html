@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lowongan Pekerjaan — Lokeria.id</title>
+  <link rel="icon" href="images/logo-icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="jobs.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="index.html">
+        <img src="images/logo-icon.png" alt="" class="brand-logo" width="34" height="34">
+        <span class="brand-mark">L</span>
+        Lokeria<span class="brand-dot">.id</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+                  <div class="nav-links">
+        <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="nav-link active" href="lowongan.html" data-i18n="nav.jobs">Lowongan</a>
+        <a class="nav-link" href="iklan.html" data-i18n="nav.advertise">Perusahaan</a>
+        <a class="nav-link" href="kategori.html" data-i18n="nav.category">Kategori</a>
+        <a class="nav-link" href="portfolio.html" data-i18n="nav.portfolio">Portofolio</a>
+        <a class="nav-link" href="about.html" data-i18n="nav.about">Tentang</a>
+        <a class="nav-link" href="contact.html" data-i18n="nav.contact">Kontak</a>
+        <a class="nav-link" href="faq.html" data-i18n="nav.faq">FAQ</a>
+      </div>
+      <div class="search-wrap search-wrap-prominent">
+        <label class="search-label" for="job-search">
+          <svg class="search-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="job-search" class="search-input" data-i18n-placeholder="search.placeholder" placeholder="Jabatan, perusahaan, atau kata kunci..." autocomplete="off">
+        </label>
+        <div class="search-results" id="search-results" role="listbox"></div>
+      </div>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+      <a class="nav-login-btn" href="login.html" data-auth-label="1" data-i18n="nav.login">Masuk</a>
+      <a class="nav-cta-btn" href="lowongan.html" data-i18n="nav.cta">Cari kerja</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero-visual">
+      <div class="page-hero-visual-bg" style="background-image:url('images/office-bg.jpg')"></div>
+      <div class="page-hero-visual-overlay"></div>
+      <div class="container page-hero-visual-content">
+        <div class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> 50 lowongan aktif</div>
+        <h1 data-i18n="jobs.title">Karir di perusahaan ternama.</h1>
+        <p data-i18n="jobs.lead">Filter berdasarkan lokasi, tipe, atau industri — lalu buka detail dan lamar.</p>
+      </div>
+    </section>
+    <section class="section container">
+      <div class="filters-bar">
+        <select id="filter-location" class="filter-select">
+          <option value="">Semua lokasi</option>
+          <option value="jakarta">Jakarta</option>
+          <option value="remote">Remote / Hybrid</option>
+          <option value="bandung">Bandung</option>
+          <option value="surabaya">Surabaya</option>
+        </select>
+        <select id="filter-type" class="filter-select">
+          <option value="">Semua tipe</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Internship">Internship</option>
+          <option value="Contract">Contract</option>
+          <option value="Freelance">Freelance</option>
+          <option value="Remote">Remote</option>
+        </select>
+        <select id="filter-industry" class="filter-select">
+          <option value="">Semua industri</option>
+          <option value="teknologi">Teknologi</option>
+          <option value="e-commerce">E-commerce</option>
+          <option value="keuangan">Keuangan</option>
+          <option value="telekomunikasi">Telekomunikasi</option>
+          <option value="edukasi">Edukasi</option>
+          <option value="media">Media</option>
+          <option value="fmcg">FMCG</option>
+          <option value="otomotif">Otomotif</option>
+        </select>
+        <select id="filter-exp" class="filter-select">
+          <option value="">Semua pengalaman</option>
+          <option value="fresh">Fresh graduate</option>
+          <option value="1-2">1–2 tahun</option>
+          <option value="3-5">3–5 tahun</option>
+          <option value="5+">5+ tahun</option>
+        </select>
+        <input type="search" id="page-job-filter" class="page-filter-input" data-i18n-placeholder="jobs.filterText" placeholder="Filter teks...">
+      </div>
+      <div class="jobs-toolbar">
+        <p class="jobs-count"><strong>50</strong> lowongan ditampilkan</p>
+      </div>
+      <div class="jobs-list" id="jobs-list">
+        <article class="job-item" data-search="Software Engineer — Backend Google Indonesia software engineer backend google developer programmer it" data-location="jakarta" data-type="Full-time" data-exp="fresh" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/google-logo.png" alt="Google Indonesia" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Google Indonesia</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=google-se" class="job-title-link">Software Engineer — Backend</a></h3>
+            <p>Bergabung dengan tim Google Indonesia. Lokasi: Jakarta / Hybrid.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Hybrid</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="google-se" title="Simpan">♥</button>
+              <a href="detail.html?job=google-se" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Frontend Engineer Google Indonesia frontend engineer react javascript google" data-location="jakarta" data-type="Full-time" data-exp="1-2" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/google-logo.png" alt="Google Indonesia" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Google Indonesia</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=google-fe" class="job-title-link">Frontend Engineer</a></h3>
+            <p>Bergabung dengan tim Google Indonesia. Lokasi: Jakarta / Hybrid.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Hybrid</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="google-fe" title="Simpan">♥</button>
+              <a href="detail.html?job=google-fe" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Program Manager Google Indonesia program manager google pm" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/google-logo.png" alt="Google Indonesia" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Google Indonesia</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=google-pm" class="job-title-link">Program Manager</a></h3>
+            <p>Bergabung dengan tim Google Indonesia. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="google-pm" title="Simpan">♥</button>
+              <a href="detail.html?job=google-pm" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Product Manager — Marketplace Shopee product manager marketplace shopee" data-location="jakarta" data-type="Part-time" data-exp="5+" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/shopee-logo.png" alt="Shopee" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Shopee</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=shopee-pm" class="job-title-link">Product Manager — Marketplace</a></h3>
+            <p>Bergabung dengan tim Shopee. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="shopee-pm" title="Simpan">♥</button>
+              <a href="detail.html?job=shopee-pm" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Backend Engineer Shopee backend engineer shopee golang" data-location="jakarta" data-type="Internship" data-exp="fresh" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/shopee-logo.png" alt="Shopee" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Shopee</span>
+              <span class="job-badge">Internship</span>
+            </div>
+            <h3><a href="detail.html?job=shopee-be" class="job-title-link">Backend Engineer</a></h3>
+            <p>Bergabung dengan tim Shopee. Lokasi: Jakarta / Remote.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Remote</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="shopee-be" title="Simpan">♥</button>
+              <a href="detail.html?job=shopee-be" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Data Scientist Shopee data scientist shopee machine learning" data-location="jakarta" data-type="Contract" data-exp="fresh" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/shopee-logo.png" alt="Shopee" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Shopee</span>
+              <span class="job-badge">Contract</span>
+            </div>
+            <h3><a href="detail.html?job=shopee-ds" class="job-title-link">Data Scientist</a></h3>
+            <p>Bergabung dengan tim Shopee. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="shopee-ds" title="Simpan">♥</button>
+              <a href="detail.html?job=shopee-ds" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Data Analyst Tokopedia data analyst tokopedia analytics" data-location="jakarta" data-type="Freelance" data-exp="1-2" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/tokopedia-logo.png" alt="Tokopedia" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Tokopedia</span>
+              <span class="job-badge">Freelance</span>
+            </div>
+            <h3><a href="detail.html?job=tokopedia-da" class="job-title-link">Data Analyst</a></h3>
+            <p>Bergabung dengan tim Tokopedia. Lokasi: Jakarta / Remote.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Remote</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="tokopedia-da" title="Simpan">♥</button>
+              <a href="detail.html?job=tokopedia-da" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="QA Engineer Tokopedia qa engineer testing tokopedia" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/tokopedia-logo.png" alt="Tokopedia" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Tokopedia</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=tokopedia-qa" class="job-title-link">QA Engineer</a></h3>
+            <p>Bergabung dengan tim Tokopedia. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="tokopedia-qa" title="Simpan">♥</button>
+              <a href="detail.html?job=tokopedia-qa" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Operations Associate Tokopedia operations associate tokopedia ops" data-location="jakarta" data-type="Remote" data-exp="5+" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/tokopedia-logo.png" alt="Tokopedia" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Tokopedia</span>
+              <span class="job-badge">Remote</span>
+            </div>
+            <h3><a href="detail.html?job=tokopedia-ops" class="job-title-link">Operations Associate</a></h3>
+            <p>Bergabung dengan tim Tokopedia. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="tokopedia-ops" title="Simpan">♥</button>
+              <a href="detail.html?job=tokopedia-ops" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="UI/UX Designer Gojek ui ux designer gojek figma" data-location="jakarta" data-type="Part-time" data-exp="fresh" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/gojek-logo.png" alt="Gojek" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Gojek</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=gojek-ux" class="job-title-link">UI/UX Designer</a></h3>
+            <p>Bergabung dengan tim Gojek. Lokasi: Jakarta / Hybrid.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Hybrid</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="gojek-ux" title="Simpan">♥</button>
+              <a href="detail.html?job=gojek-ux" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="iOS Engineer Gojek ios engineer swift gojek" data-location="jakarta" data-type="Full-time" data-exp="fresh" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/gojek-logo.png" alt="Gojek" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Gojek</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=gojek-ios" class="job-title-link">iOS Engineer</a></h3>
+            <p>Bergabung dengan tim Gojek. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="gojek-ios" title="Simpan">♥</button>
+              <a href="detail.html?job=gojek-ios" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Android Engineer Gojek android engineer kotlin gojek" data-location="jakarta" data-type="Full-time" data-exp="1-2" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/gojek-logo.png" alt="Gojek" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Gojek</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=gojek-android" class="job-title-link">Android Engineer</a></h3>
+            <p>Bergabung dengan tim Gojek. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="gojek-android" title="Simpan">♥</button>
+              <a href="detail.html?job=gojek-android" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Relationship Manager — Corporate BCA relationship manager bca bank corporate" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="keuangan">
+          <div class="job-logo-wrap">
+            <img src="images/bca-logo.png" alt="BCA" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">BCA</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=bca-rm" class="job-title-link">Relationship Manager — Corporate</a></h3>
+            <p>Bergabung dengan tim BCA. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="bca-rm" title="Simpan">♥</button>
+              <a href="detail.html?job=bca-rm" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="IT Security Analyst BCA it security analyst bca cybersecurity" data-location="jakarta" data-type="Part-time" data-exp="5+" data-industry="keuangan">
+          <div class="job-logo-wrap">
+            <img src="images/bca-logo.png" alt="BCA" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">BCA</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=bca-it" class="job-title-link">IT Security Analyst</a></h3>
+            <p>Bergabung dengan tim BCA. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="bca-it" title="Simpan">♥</button>
+              <a href="detail.html?job=bca-it" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Customer Service Officer BCA customer service bca teller" data-location="bandung" data-type="Internship" data-exp="fresh" data-industry="keuangan">
+          <div class="job-logo-wrap">
+            <img src="images/bca-logo.png" alt="BCA" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">BCA</span>
+              <span class="job-badge">Internship</span>
+            </div>
+            <h3><a href="detail.html?job=bca-teller" class="job-title-link">Customer Service Officer</a></h3>
+            <p>Bergabung dengan tim BCA. Lokasi: Bandung.</p>
+            <div class="job-footer">
+              <span>📍 Bandung</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="bca-teller" title="Simpan">♥</button>
+              <a href="detail.html?job=bca-teller" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Cloud Solutions Architect Microsoft cloud architect microsoft azure" data-location="jakarta" data-type="Contract" data-exp="fresh" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/microsoft-logo.png" alt="Microsoft" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Microsoft</span>
+              <span class="job-badge">Contract</span>
+            </div>
+            <h3><a href="detail.html?job=microsoft-cloud" class="job-title-link">Cloud Solutions Architect</a></h3>
+            <p>Bergabung dengan tim Microsoft. Lokasi: Jakarta / Remote.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Remote</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="microsoft-cloud" title="Simpan">♥</button>
+              <a href="detail.html?job=microsoft-cloud" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Technical Support Engineer Microsoft technical support microsoft" data-location="jakarta" data-type="Freelance" data-exp="1-2" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/microsoft-logo.png" alt="Microsoft" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Microsoft</span>
+              <span class="job-badge">Freelance</span>
+            </div>
+            <h3><a href="detail.html?job=microsoft-support" class="job-title-link">Technical Support Engineer</a></h3>
+            <p>Bergabung dengan tim Microsoft. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="microsoft-support" title="Simpan">♥</button>
+              <a href="detail.html?job=microsoft-support" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Operations Manager Amazon operations manager amazon logistics" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/amazon-logo.png" alt="Amazon" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Amazon</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=amazon-ops" class="job-title-link">Operations Manager</a></h3>
+            <p>Bergabung dengan tim Amazon. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="amazon-ops" title="Simpan">♥</button>
+              <a href="detail.html?job=amazon-ops" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Software Development Engineer Amazon software development engineer amazon sde" data-location="jakarta" data-type="Remote" data-exp="5+" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/amazon-logo.png" alt="Amazon" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Amazon</span>
+              <span class="job-badge">Remote</span>
+            </div>
+            <h3><a href="detail.html?job=amazon-sde" class="job-title-link">Software Development Engineer</a></h3>
+            <p>Bergabung dengan tim Amazon. Lokasi: Jakarta / Remote.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Remote</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="amazon-sde" title="Simpan">♥</button>
+              <a href="detail.html?job=amazon-sde" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Digital Marketing Specialist Meta digital marketing meta facebook ads" data-location="jakarta" data-type="Part-time" data-exp="fresh" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/meta-logo.png" alt="Meta" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Meta</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=meta-marketing" class="job-title-link">Digital Marketing Specialist</a></h3>
+            <p>Bergabung dengan tim Meta. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="meta-marketing" title="Simpan">♥</button>
+              <a href="detail.html?job=meta-marketing" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="User Experience Researcher Meta ux researcher meta research" data-location="remote" data-type="Full-time" data-exp="fresh" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/meta-logo.png" alt="Meta" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Meta</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=meta-research" class="job-title-link">User Experience Researcher</a></h3>
+            <p>Bergabung dengan tim Meta. Lokasi: Remote.</p>
+            <div class="job-footer">
+              <span>📍 Remote</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="meta-research" title="Simpan">♥</button>
+              <a href="detail.html?job=meta-research" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Content Operations Specialist Netflix content operations netflix media" data-location="jakarta" data-type="Full-time" data-exp="1-2" data-industry="media">
+          <div class="job-logo-wrap">
+            <img src="images/netflix-logo.png" alt="Netflix" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Netflix</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=netflix-content" class="job-title-link">Content Operations Specialist</a></h3>
+            <p>Bergabung dengan tim Netflix. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="netflix-content" title="Simpan">♥</button>
+              <a href="detail.html?job=netflix-content" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Retail Specialist Apple retail specialist apple store" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/apple-logo.png" alt="Apple" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Apple</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=apple-retail" class="job-title-link">Retail Specialist</a></h3>
+            <p>Bergabung dengan tim Apple. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="apple-retail" title="Simpan">♥</button>
+              <a href="detail.html?job=apple-retail" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Frontend Developer Traveloka frontend developer traveloka react" data-location="jakarta" data-type="Part-time" data-exp="5+" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/traveloka-logo.png" alt="Traveloka" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Traveloka</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=traveloka-fe" class="job-title-link">Frontend Developer</a></h3>
+            <p>Bergabung dengan tim Traveloka. Lokasi: Jakarta / Hybrid.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Hybrid</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="traveloka-fe" title="Simpan">♥</button>
+              <a href="detail.html?job=traveloka-fe" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Business Analyst Traveloka business analyst traveloka" data-location="jakarta" data-type="Internship" data-exp="fresh" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/traveloka-logo.png" alt="Traveloka" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Traveloka</span>
+              <span class="job-badge">Internship</span>
+            </div>
+            <h3><a href="detail.html?job=traveloka-ba" class="job-title-link">Business Analyst</a></h3>
+            <p>Bergabung dengan tim Traveloka. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="traveloka-ba" title="Simpan">♥</button>
+              <a href="detail.html?job=traveloka-ba" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Growth Marketing Lead Bukalapak growth marketing bukalapak" data-location="jakarta" data-type="Contract" data-exp="fresh" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/bukalapak-logo.png" alt="Bukalapak" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Bukalapak</span>
+              <span class="job-badge">Contract</span>
+            </div>
+            <h3><a href="detail.html?job=bukalapak-growth" class="job-title-link">Growth Marketing Lead</a></h3>
+            <p>Bergabung dengan tim Bukalapak. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="bukalapak-growth" title="Simpan">♥</button>
+              <a href="detail.html?job=bukalapak-growth" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Backend Developer Bukalapak backend developer bukalapak" data-location="jakarta" data-type="Freelance" data-exp="1-2" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/bukalapak-logo.png" alt="Bukalapak" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Bukalapak</span>
+              <span class="job-badge">Freelance</span>
+            </div>
+            <h3><a href="detail.html?job=bukalapak-be" class="job-title-link">Backend Developer</a></h3>
+            <p>Bergabung dengan tim Bukalapak. Lokasi: Jakarta / Remote.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Remote</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="bukalapak-be" title="Simpan">♥</button>
+              <a href="detail.html?job=bukalapak-be" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Product Owner Blibli product owner blibli scrum" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/blibli-logo.png" alt="Blibli" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Blibli</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=blibli-pm" class="job-title-link">Product Owner</a></h3>
+            <p>Bergabung dengan tim Blibli. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="blibli-pm" title="Simpan">♥</button>
+              <a href="detail.html?job=blibli-pm" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Data Engineer Blibli data engineer blibli etl" data-location="jakarta" data-type="Remote" data-exp="5+" data-industry="e-commerce">
+          <div class="job-logo-wrap">
+            <img src="images/blibli-logo.png" alt="Blibli" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Blibli</span>
+              <span class="job-badge">Remote</span>
+            </div>
+            <h3><a href="detail.html?job=blibli-data" class="job-title-link">Data Engineer</a></h3>
+            <p>Bergabung dengan tim Blibli. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="blibli-data" title="Simpan">♥</button>
+              <a href="detail.html?job=blibli-data" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Driver Operations Analyst Grab driver operations grab analyst" data-location="jakarta" data-type="Part-time" data-exp="fresh" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/grab-logo.png" alt="Grab" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Grab</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=grab-driver-ops" class="job-title-link">Driver Operations Analyst</a></h3>
+            <p>Bergabung dengan tim Grab. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="grab-driver-ops" title="Simpan">♥</button>
+              <a href="detail.html?job=grab-driver-ops" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Machine Learning Engineer Grab machine learning engineer grab ml" data-location="jakarta" data-type="Full-time" data-exp="fresh" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/grab-logo.png" alt="Grab" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Grab</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=grab-ml" class="job-title-link">Machine Learning Engineer</a></h3>
+            <p>Bergabung dengan tim Grab. Lokasi: Jakarta / Hybrid.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Hybrid</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="grab-ml" title="Simpan">♥</button>
+              <a href="detail.html?job=grab-ml" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Customer Experience Lead tiket.com customer experience tiket" data-location="jakarta" data-type="Full-time" data-exp="1-2" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/tiket-logo.png" alt="tiket.com" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">tiket.com</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=tiket-cs" class="job-title-link">Customer Experience Lead</a></h3>
+            <p>Bergabung dengan tim tiket.com. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="tiket-cs" title="Simpan">♥</button>
+              <a href="detail.html?job=tiket-cs" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Android Developer tiket.com android developer tiket" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="teknologi">
+          <div class="job-logo-wrap">
+            <img src="images/tiket-logo.png" alt="tiket.com" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">tiket.com</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=tiket-android" class="job-title-link">Android Developer</a></h3>
+            <p>Bergabung dengan tim tiket.com. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="tiket-android" title="Simpan">♥</button>
+              <a href="detail.html?job=tiket-android" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Education Content Creator Ruangguru content creator ruangguru education" data-location="jakarta" data-type="Part-time" data-exp="5+" data-industry="edukasi">
+          <div class="job-logo-wrap">
+            <img src="images/ruangguru-logo.png" alt="Ruangguru" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Ruangguru</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=ruangguru-content" class="job-title-link">Education Content Creator</a></h3>
+            <p>Bergabung dengan tim Ruangguru. Lokasi: Jakarta / Remote.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta / Remote</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="ruangguru-content" title="Simpan">♥</button>
+              <a href="detail.html?job=ruangguru-content" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Fullstack Engineer Ruangguru fullstack engineer ruangguru" data-location="jakarta" data-type="Internship" data-exp="fresh" data-industry="edukasi">
+          <div class="job-logo-wrap">
+            <img src="images/ruangguru-logo.png" alt="Ruangguru" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Ruangguru</span>
+              <span class="job-badge">Internship</span>
+            </div>
+            <h3><a href="detail.html?job=ruangguru-eng" class="job-title-link">Fullstack Engineer</a></h3>
+            <p>Bergabung dengan tim Ruangguru. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="ruangguru-eng" title="Simpan">♥</button>
+              <a href="detail.html?job=ruangguru-eng" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Network Engineer Telkom Indonesia network engineer telkom" data-location="bandung" data-type="Contract" data-exp="fresh" data-industry="telekomunikasi">
+          <div class="job-logo-wrap">
+            <img src="images/telkom-logo.png" alt="Telkom Indonesia" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Telkom Indonesia</span>
+              <span class="job-badge">Contract</span>
+            </div>
+            <h3><a href="detail.html?job=telkom-network" class="job-title-link">Network Engineer</a></h3>
+            <p>Bergabung dengan tim Telkom Indonesia. Lokasi: Bandung.</p>
+            <div class="job-footer">
+              <span>📍 Bandung</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="telkom-network" title="Simpan">♥</button>
+              <a href="detail.html?job=telkom-network" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Digital Product Manager Telkom Indonesia digital product manager telkom" data-location="jakarta" data-type="Freelance" data-exp="1-2" data-industry="telekomunikasi">
+          <div class="job-logo-wrap">
+            <img src="images/telkom-logo.png" alt="Telkom Indonesia" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Telkom Indonesia</span>
+              <span class="job-badge">Freelance</span>
+            </div>
+            <h3><a href="detail.html?job=telkom-digital" class="job-title-link">Digital Product Manager</a></h3>
+            <p>Bergabung dengan tim Telkom Indonesia. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="telkom-digital" title="Simpan">♥</button>
+              <a href="detail.html?job=telkom-digital" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Credit Analyst Bank Mandiri credit analyst mandiri bank" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="keuangan">
+          <div class="job-logo-wrap">
+            <img src="images/mandiri-logo.png" alt="Bank Mandiri" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Bank Mandiri</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=mandiri-credit" class="job-title-link">Credit Analyst</a></h3>
+            <p>Bergabung dengan tim Bank Mandiri. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="mandiri-credit" title="Simpan">♥</button>
+              <a href="detail.html?job=mandiri-credit" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Application Developer Bank Mandiri application developer mandiri java" data-location="jakarta" data-type="Remote" data-exp="5+" data-industry="keuangan">
+          <div class="job-logo-wrap">
+            <img src="images/mandiri-logo.png" alt="Bank Mandiri" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Bank Mandiri</span>
+              <span class="job-badge">Remote</span>
+            </div>
+            <h3><a href="detail.html?job=mandiri-it" class="job-title-link">Application Developer</a></h3>
+            <p>Bergabung dengan tim Bank Mandiri. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="mandiri-it" title="Simpan">♥</button>
+              <a href="detail.html?job=mandiri-it" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Account Officer Mikro BRI account officer bri mikro" data-location="surabaya" data-type="Part-time" data-exp="fresh" data-industry="keuangan">
+          <div class="job-logo-wrap">
+            <img src="images/bri-logo.png" alt="BRI" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">BRI</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=bri-micro" class="job-title-link">Account Officer Mikro</a></h3>
+            <p>Bergabung dengan tim BRI. Lokasi: Surabaya.</p>
+            <div class="job-footer">
+              <span>📍 Surabaya</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="bri-micro" title="Simpan">♥</button>
+              <a href="detail.html?job=bri-micro" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Digital Banking Specialist BRI digital banking bri" data-location="jakarta" data-type="Full-time" data-exp="fresh" data-industry="keuangan">
+          <div class="job-logo-wrap">
+            <img src="images/bri-logo.png" alt="BRI" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">BRI</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=bri-digital" class="job-title-link">Digital Banking Specialist</a></h3>
+            <p>Bergabung dengan tim BRI. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="bri-digital" title="Simpan">♥</button>
+              <a href="detail.html?job=bri-digital" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Wealth Management Advisor BNI wealth management bni advisor" data-location="jakarta" data-type="Full-time" data-exp="1-2" data-industry="keuangan">
+          <div class="job-logo-wrap">
+            <img src="images/bni-logo.png" alt="BNI" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">BNI</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=bni-wealth" class="job-title-link">Wealth Management Advisor</a></h3>
+            <p>Bergabung dengan tim BNI. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="bni-wealth" title="Simpan">♥</button>
+              <a href="detail.html?job=bni-wealth" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Risk Management Analyst BNI risk management bni analyst" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="keuangan">
+          <div class="job-logo-wrap">
+            <img src="images/bni-logo.png" alt="BNI" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">BNI</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=bni-risk" class="job-title-link">Risk Management Analyst</a></h3>
+            <p>Bergabung dengan tim BNI. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="bni-risk" title="Simpan">♥</button>
+              <a href="detail.html?job=bni-risk" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Radio Network Planner XL Axiata network planner xl axiata telecom" data-location="jakarta" data-type="Part-time" data-exp="5+" data-industry="telekomunikasi">
+          <div class="job-logo-wrap">
+            <img src="images/xl-logo.png" alt="XL Axiata" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">XL Axiata</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=xl-network" class="job-title-link">Radio Network Planner</a></h3>
+            <p>Bergabung dengan tim XL Axiata. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="xl-network" title="Simpan">♥</button>
+              <a href="detail.html?job=xl-network" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Brand Marketing Manager XL Axiata brand marketing xl" data-location="jakarta" data-type="Internship" data-exp="fresh" data-industry="telekomunikasi">
+          <div class="job-logo-wrap">
+            <img src="images/xl-logo.png" alt="XL Axiata" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">XL Axiata</span>
+              <span class="job-badge">Internship</span>
+            </div>
+            <h3><a href="detail.html?job=xl-marketing" class="job-title-link">Brand Marketing Manager</a></h3>
+            <p>Bergabung dengan tim XL Axiata. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="xl-marketing" title="Simpan">♥</button>
+              <a href="detail.html?job=xl-marketing" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Enterprise Sales Executive Indosat Ooredoo enterprise sales indosat" data-location="jakarta" data-type="Contract" data-exp="fresh" data-industry="telekomunikasi">
+          <div class="job-logo-wrap">
+            <img src="images/indosat-logo.png" alt="Indosat Ooredoo" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Indosat Ooredoo</span>
+              <span class="job-badge">Contract</span>
+            </div>
+            <h3><a href="detail.html?job=indosat-sales" class="job-title-link">Enterprise Sales Executive</a></h3>
+            <p>Bergabung dengan tim Indosat Ooredoo. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="indosat-sales" title="Simpan">♥</button>
+              <a href="detail.html?job=indosat-sales" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="NOC Engineer Indosat Ooredoo noc engineer indosat network" data-location="jakarta" data-type="Freelance" data-exp="1-2" data-industry="telekomunikasi">
+          <div class="job-logo-wrap">
+            <img src="images/indosat-logo.png" alt="Indosat Ooredoo" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Indosat Ooredoo</span>
+              <span class="job-badge">Freelance</span>
+            </div>
+            <h3><a href="detail.html?job=indosat-noc" class="job-title-link">NOC Engineer</a></h3>
+            <p>Bergabung dengan tim Indosat Ooredoo. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="indosat-noc" title="Simpan">♥</button>
+              <a href="detail.html?job=indosat-noc" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Brand Manager Unilever brand manager unilever fmcg" data-location="jakarta" data-type="Full-time" data-exp="3-5" data-industry="fmcg">
+          <div class="job-logo-wrap">
+            <img src="images/unilever-logo.png" alt="Unilever" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Unilever</span>
+              <span class="job-badge">Full-time</span>
+            </div>
+            <h3><a href="detail.html?job=unilever-brand" class="job-title-link">Brand Manager</a></h3>
+            <p>Bergabung dengan tim Unilever. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="unilever-brand" title="Simpan">♥</button>
+              <a href="detail.html?job=unilever-brand" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="Supply Chain Analyst Unilever supply chain unilever analyst" data-location="jakarta" data-type="Remote" data-exp="5+" data-industry="fmcg">
+          <div class="job-logo-wrap">
+            <img src="images/unilever-logo.png" alt="Unilever" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Unilever</span>
+              <span class="job-badge">Remote</span>
+            </div>
+            <h3><a href="detail.html?job=unilever-supply" class="job-title-link">Supply Chain Analyst</a></h3>
+            <p>Bergabung dengan tim Unilever. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="unilever-supply" title="Simpan">♥</button>
+              <a href="detail.html?job=unilever-supply" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="job-item" data-search="HR Business Partner Astra International hr business partner astra" data-location="jakarta" data-type="Part-time" data-exp="fresh" data-industry="otomotif">
+          <div class="job-logo-wrap">
+            <img src="images/astragraphia-logo.png" alt="Astra International" class="job-logo-img">
+          </div>
+          <div class="job-content">
+            <div class="job-meta">
+              <span class="job-company">Astra International</span>
+              <span class="job-badge">Part-time</span>
+            </div>
+            <h3><a href="detail.html?job=astra-hr" class="job-title-link">HR Business Partner</a></h3>
+            <p>Bergabung dengan tim Astra International. Lokasi: Jakarta.</p>
+            <div class="job-footer">
+              <span>📍 Jakarta</span>
+              <span>💰 Kompetitif</span>
+              <button type="button" class="fav-btn-inline" data-fav="astra-hr" title="Simpan">♥</button>
+              <a href="detail.html?job=astra-hr" class="text-link">Detail <span>→</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="jobs-note">
+        <p><strong>Catatan:</strong> Lowongan contoh untuk tugas/demo. Bukan lowongan resmi perusahaan.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand brand-footer" href="index.html"><span class="brand-mark">L</span> Lokeria<span class="brand-dot">.id</span></a>
+      <p data-i18n="footer.tagline">Menghubungkan potensi dengan peluang.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a><a href="lowongan.html">Lowongan</a><a href="iklan.html">Iklankan</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-social">
+        <a href="#">IG</a><a href="#">in</a><a href="#">X</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year></span> Lokeria.</span>
+      <span>Demo untuk tugas.</span>
+    </div>
+  </footer>
+
+  <script>
+    // hero q param
+    (function () {
+      var q = new URLSearchParams(location.search).get('q');
+      if (q) {
+        var el = document.getElementById('page-job-filter');
+        if (el) { el.value = q; el.dispatchEvent(new Event('input')); }
+      }
+    })();
+  </script>
+</body>
+</html>
